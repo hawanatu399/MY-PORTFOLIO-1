@@ -293,7 +293,88 @@ footer {
   letter-spacing: 1px;
 }
 
-@media (max-width: 900px) {
+/* --- ENHANCED MOBILE RESPONSIVENESS --- */
+
+@media (max-width: 768px) {
+  /* 1. Adjust Spacing */
+  .container {
+    padding: 60px 6%;
+  }
+
+  /* 2. Fix Hero Section */
+  .hero {
+    height: auto;
+    padding: 120px 6% 60px; /* More top padding for the fixed nav */
+  }
+
+  .hero h1 {
+    font-size: 2.4rem; /* Smaller but bold */
+    line-height: 1.2;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  /* 3. Stack Buttons Vertically */
+  .hero-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%; /* Full width for easy tapping */
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  /* 4. Fix About Layout */
+  .about-layout {
+    grid-template-columns: 1fr; /* Stack text and cards */
+    gap: 30px;
+  }
+
+  /* 5. Improve Project Cards */
+  .project-grid {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+
+  .project-card {
+    padding: 30px 20px;
+  }
+
+  /* 6. Footer Adjustments */
+  .big-email {
+    font-size: 1.4rem; /* Prevent horizontal scrolling */
+    word-wrap: break-word;
+  }
+
+  /* 7. Hide Nav Links (Optional) */
+  /* Many mobile portfolios use a clean simple header or a burger menu. 
+       For now, let's keep them centered for easy access. */
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+}
+
+/* Extra Small Devices (Phones under 400px) */
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+}
+
+/*@media (max-width: 900px) {
   .about-layout {
     grid-template-columns: 1fr;
   }
@@ -304,4 +385,4 @@ footer {
     width: 100%;
     margin: 10px 0 !important;
   }
-}
+}*/
